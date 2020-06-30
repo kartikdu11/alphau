@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>Sign Up</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    	<link rel="shortcut icon" type="image/x-icon" href="alphau2.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  var a,b=0,c=0,d=0,e=0,f=0,g=0,n,ch,w=0,x=0;
+  $(document).ready(function(){
+  	$("#pwd").keyup(function(){
+    	a=$("#pwd").val();
+        n=a.length;
+        ch=a.substring(n-1,n);
+	
+        if(ch>='A' && ch<='Z' && b==0 && n!=0)
+        {
+        	w=w+62.5;
+            b=b+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+        if(ch>='a' && ch<='z' && c==0 && n!=0)
+        {
+        	w=w+62.5;
+            c=c+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+        if(ch>='0' && ch<='9' && d==0 && n!=0)
+        {
+        	w=w+62.5;
+            d=d+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+	 var format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+	 if( ch.match(format) && g==0  && n!=0)
+	 {
+  	     w=w+62.5;
+            g=g+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+	 }
+        if(n<8 && e==0 && n!=0)
+        {
+        	w=w+100;
+            e=e+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+        if(n>=8 && f==0 && n!=0)
+        {
+        	w=w+150;
+            f=f+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+         var key = event.keyCode || event.charCode;
+           if (w>0 && key == 8 || key==46)
+                {
+                    w=w-67;
+                    $("#pb").css("width",w);
+                    if(x!=w)
+		              {
+                          x=w;
+                          if(x<=200)
+                            $("#pb").css("background-color","red");
+                          else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                          else if(x>320)
+                            $("#pb").css("background-color","green");
+                      }
+                }
+                if(n==0)
+	            {
+		          $("#pb").css("width","0");
+                    a=b=c=d=e=f=g=w=0;
+	            }
+    });
+  });
+  </script>
+<style>              
+</style>
+</head>
+<body style="background-color:#101010;">
+  <div style="background-color:#101010;">
+      <a href="alphaU.html">  <img src="alphau2.ico" width="100" height="60" style="margin-top:1%;margin-left:1%"></a>
+</div>
+     </div>
+<center><h1 class="impact" style="color:white;">Sign Up</h1></center>
+
+<center>
+<center>
+<div class="w3-container" style="background-color:#101010;">
+
+ <form class="w3-container w3-card-4" style="width:40%; margin-top:2%">
+    <div class="form-group">
+    <br>
+      <label for="firstname" style="float:left;color:white;"><i class="glyphicon glyphicon-user"></i>First Name:</label>
+      <input type="firstname" class="w3-input" id="firstname" placeholder="Enter FirstName" name="firstemail" style="width:100%;"required>
+    </div>
+
+    <div class="form-group">
+        <br>
+          <label for="lastname" style="float:left;color:white;"><i class="glyphicon glyphicon-user"></i>Last Name:</label>
+          <input type="lastname" class="w3-input" id="lastname" placeholder="Enter LastName" name="lastemail" style="width:100%;"required>
+        </div>
+
+        <div class="form-group">
+            <br>
+              <label for="email" style="float:left;color:white;"><i class="glyphicon glyphicon-envelope"></i>Username:</label>
+              <input type="email" class="w3-input" id="email" placeholder="Enter Email" name="email" style="width:100%;"required>
+            </div>
+
+    <div class="form-group">
+      <label for="pwd" style="float:left;color:white;"><i class="glyphicon glyphicon-lock"></i>Password:</label>
+      <input type="password"class="w3-input" id="pwd" placeholder="At least 6 characters" name="pwd"  style="width:100%;" required>
+    </div>
+
+<label style="float:left;color:white;"><b>Password Strength:</b></label>
+ <div class="progress" style="width:100%">
+   <div id="pb" class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100">
+   </div>
+ </div>
+    <button type="submit" class="w3-button w3-section w3-black w3-ripple"><a href="alphaU.html" style="color: ;">Submit<i class="glyphicon glyphicon-log-in"></i></a></button>
+  </form>
+</div>
+</center>
+</body>
+</html>

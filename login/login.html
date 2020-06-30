@@ -1,0 +1,238 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<title>Login</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script>
+  var a,b=0,c=0,d=0,e=0,f=0,g=0,n,ch,w=0,x=0;
+  $(document).ready(function(){
+  	$("#pwd").keyup(function(){
+    	a=$("#pwd").val();
+        n=a.length;
+        ch=a.substring(n-1,n);
+	
+        if(ch>='A' && ch<='Z' && b==0 && n!=0)
+        {
+        	w=w+62.5;
+            b=b+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+        if(ch>='a' && ch<='z' && c==0 && n!=0)
+        {
+        	w=w+62.5;
+            c=c+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+        if(ch>='0' && ch<='9' && d==0 && n!=0)
+        {
+        	w=w+62.5;
+            d=d+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+	 var format = /^[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]*$/;
+	 if( ch.match(format) && g==0  && n!=0)
+	 {
+  	     w=w+62.5;
+            g=g+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+	 }
+        if(n<8 && e==0 && n!=0)
+        {
+        	w=w+100;
+            e=e+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+        if(n>=8 && f==0 && n!=0)
+        {
+        	w=w+150;
+            f=f+1;
+            $("#pb").css("width",w);
+		      if(x!=w)
+		      {
+                    x=w;
+                    if(x<=200)
+                            $("#pb").css("background-color","red");
+			        else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                    else if(x>320)
+                            $("#pb").css("background-color","green");
+		      }
+        }
+         var key = event.keyCode || event.charCode;
+           if (w>0 && key == 8 || key==46)
+                {
+                    w=w-67;
+                    $("#pb").css("width",w);
+                    if(x!=w)
+		              {
+                          x=w;
+                          if(x<=200)
+                            $("#pb").css("background-color","red");
+                          else if(x<=320 && x>200)
+			                $("#pb").css("background-color","orange");
+                          else if(x>320)
+                            $("#pb").css("background-color","green");
+                      }
+                }
+                if(n==0)
+	            {
+		          $("#pb").css("width","0");
+                    a=b=c=d=e=f=g=w=0;
+	            }
+    });
+  });
+  </script>
+<style> 
+        h1.impact{
+                font-family: Impact, Charcoal, sans-serif;
+                color: darkgrey;
+        }   
+        p{
+                color:orange;
+        }    
+        
+        h4 { 
+            display: flex; 
+            flex-direction: row; 
+        } 
+          
+        h4:before, 
+        h4:after { 
+            content: ""; 
+            flex: 1 1; 
+            border-bottom: 2px solid #000; 
+            margin:auto; 
+        } 
+
+        .button {
+  display: inline-block;
+  border-radius: 3px;
+  background-color: #140703;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 22px;
+  padding: 15px;
+  width: 250px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+s
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body style="background-color:#101010;">
+        <div style="background-color:#101010;">
+                <img src="alphau2.ico" width="100" height="60" style="margin-top:1%;margin-left:1%">
+        </div>
+<center><h1 class="impact" style="color:white;">Login to your account</h1></center>
+
+<center>
+<div class="w3-container" style="background-color:#101010;">
+
+ <form class="w3-container w3-card-4" style="width:35%;height:100%; margin-top:2%">
+    <div class="form-group">
+    <br><br>
+      <label for="email" style="float:left;color:white;"><i class="glyphicon glyphicon-envelope"></i>Email:</label>
+      <input type="email" class="w3-input" id="email" placeholder="Enter Email" name="email" style="width:100%;"required>
+    </div><br>
+    <div class="form-group">
+      <label for="pwd" style="float:left;color:white;"><i class="glyphicon glyphicon-user"></i>Password:</label>
+      <input type="password"class="w3-input" id="pwd" placeholder="Enter Password" name="pwd"  style="width:100%;" required>
+    </div>
+
+
+    <button type="submit" class="w3-button w3-section w3-black w3-ripple"><a href="alphaU.html" style="color: whitesmoke;">Login<i class="glyphicon glyphicon-log-in"></i></a></button>
+    <p style="color:orange;">Forgot your password?</p><br>
+  </form>
+</div>
+
+</center><br>
+<h4>Don't have an account yet?</h4> <br><br>
+<center><p><a href="signup.html" style="color:orange;">Create an Account</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="signup.html" style="color:orange;">Recover Account</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="signup.html" style="color:orange;">Login with Google</a></p></center>
+</body>
+</html>
