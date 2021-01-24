@@ -5,4 +5,4 @@ alphaubykartik is front end website created by me. The website is basically to s
 
 You can check the website from the link given below:-
 
-https://kartikdu11.github.io/alphaubykartk/
+https://kartikdua11.github.io/alphaubykartk/
